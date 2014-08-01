@@ -51,7 +51,7 @@ angular.module('rember', ['ionic', 'firebase', 'rember.controllers'])
                     } else if (user) {
                         // user authenticated with Firebase
                         $rootScope.userEmail = user.email;
-                        $window.location.href = ('#/bucket/rsvp');
+                        $window.location.href = ('#/bucket/list');
                     } else {
                         // user is logged out
                         $rootScope.userEmail = null;
@@ -67,7 +67,6 @@ angular.module('rember', ['ionic', 'firebase', 'rember.controllers'])
         .state('intro', {
             url: '/',
             templateUrl: 'templates/intro.html',
-            //template: 'templates/intro.html',
             controller: 'IntroCtrl'
         })
         .state('auth', {
